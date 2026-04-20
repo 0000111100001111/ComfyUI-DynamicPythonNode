@@ -1,0 +1,15 @@
+[project]
+name = "ComfyUI-DynamicPythonNode"
+description = "This extension provides a node with dynamic inputs and outputs that lets you write and execute arbitrary python code. The IO fields are decided by the code; see example when placing node. Can return values or act as an execution node."
+version = "1.0.0"
+license = "LICENSE"
+dependencies = []
+
+[project.urls]
+Repository = "https://github.com/0000111100001111/ComfyUI-DynamicPythonNode"
+#  Used by Comfy Registry https://comfyregistry.org
+
+[tool.comfy]
+PublisherId = ""
+DisplayName = "ComfyUI-DynamicPythonNode"
+Icon = ""
