@@ -28,7 +28,7 @@ app.registerExtension({
                     }
                 };
 
-                // Lag knappen kun hvis den ikke finnes fra før
+                // Create the compile button
                 if (!this.compileBtn) {
                     this.compileBtn = this.addWidget("button", "Verify and compile code", null, () => {
                         api.fetchApi("/dynamic_node/compile", {
@@ -60,7 +60,7 @@ app.registerExtension({
                                 return { name: output.name, type: output.type, connections };
                             }) : [];
 
-                            // --- Tving fjerning av ALL utganger ---
+                            // Remove all current outputs
                             if (this.inputs) {
                                 for (let i = this.inputs.length - 1; i >= 0; i--) {
                                     if (this.inputs[i].name !== "code") this.removeInput(i);
@@ -100,7 +100,7 @@ app.registerExtension({
                         });
                     });
 
-                    // Flytt knappen til toppen (kun hvis den ikke er der allerede)
+                    // Move the button back to the top
                     const btnIdx = this.widgets.indexOf(this.compileBtn);
                     if (btnIdx !== -1 && btnIdx !== 0) {
                         this.widgets.splice(btnIdx, 1);
